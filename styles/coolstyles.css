@@ -217,4 +217,23 @@ input{
 .shape1:nth-child(5){
 	/* apply multiple transform in the same transform property */
 	transform: rotate(30deg) scale(0.8) skew(5deg, 10deg);
+
+/* css animation jump */
+animation-name: jump;
+animation-duration: 3s;
+animation-timing-function: ease;
+}
+
+/******************************************
+		animation
+******************************************/
+
+/* css animation */
+
+@keyframes jump{
+	/* define the shape of animation ("jump in the case */
+
+	50%{
+		transform: scale(0.8) skew (5deg, 10deg) translate(0, -100px);
+	}
 }
