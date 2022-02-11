@@ -176,3 +176,45 @@ unselected alone when you click on them */
 input{
 	display:none;
 }
+
+
+
+/* playing with transforms... */
+.shapes{
+	display:flex;
+	justify-content:space-evenly;
+}
+
+.shape1{
+	width:60px;
+	height:60px;
+	background:lightblue;
+}
+
+.shape1:nth-child(2){
+	/* use the transform property to add a rotation to this element */
+	transform: rotate(45deg);
+	/* use transition to animate a change in the transform */
+	transition: all 2s;
+}
+/* add an animation on hover */
+.shape1:nth-child(2):hover{
+	transform: rotate(360deg);
+}
+
+.shape1:nth-child(3){
+	/* use the transform property to add a scale (size) to this element */
+	transform: scale(0.5, 0.75);
+	/* for scale: 1 is the default size 
+	one value scales equally on the x and y axis - two values scales different on the 
+	x then y axis */
+}
+.shape1:nth-child(4){
+	/* use the transform property to add a skew (distortion) to this element */
+	transform: skew(20deg, 10deg);
+}
+
+.shape1:nth-child(5){
+	/* apply multiple transform in the same transform property */
+	transform: rotate(30deg) scale(0.8) skew(5deg, 10deg);
+}
