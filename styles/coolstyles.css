@@ -96,11 +96,45 @@ footer p{
 	background-image:url("../images/plains.png");
 	background-size:100% auto;
 	text-align:center;
+	/* overflow:hidden will hide anything outside the width and height of this element */
+	overflow:hidden;
+}
+
+/* this will lengthen the div holding the images, so there's room for them to sit next to each other */
+#slideholder{
+	width:1500px;
+	height:300px;
+	padding-top:20px;
+}
+
+/* this just makes the images sit next to each other */
+.imgslide{
+	width:500px;
+	height:300px;
+	float:left;
+}
+
+/* this just pushes the images of the animals lower so it looks like they are standing
+on the grass */
+.imgslide img{
+	margin-top:135px;
+}
+
+/* this changes the position, using margin, of the div holding the slides
+based on which radio button is checked */
+#slide1:checked ~ #slideholder{ margin-left:0; }
+#slide2:checked ~ #slideholder{ margin-left:-500px; }
+#slide3:checked ~ #slideholder{	margin-left:-1000px; }
+
+/* add a transition so that each time the property changes, it animates */
+#slideholder{
+	transition: margin 1s;
 }
 
 /******************************************
 		Labels
-**************label{
+******************************************/
+label{
 	display:inline-block;
 	width:100px;
 	padding:5px 0;
