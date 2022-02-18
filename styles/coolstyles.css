@@ -222,6 +222,7 @@ input{
 animation-name: jump;
 animation-duration: 3s;
 animation-timing-function: ease;
+animation-iteration-count: infinite;
 }
 
 /******************************************
@@ -235,5 +236,15 @@ animation-timing-function: ease;
 
 	50%{
 		transform: scale(0.8) skew (5deg, 10deg) translate(0, -100px);
+	}
+}
+
+@keyframes pendulum{
+	0%,
+	100%{
+		
+	}
+	0%{
+		transform: rotate(77deg);
 	}
 }
